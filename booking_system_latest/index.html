@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tutor Booking</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #FFE6C0;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: right;
+            position: relative;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #601204;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            z-index: 1000;
+        }
+
+        .nav-box {
+            flex: 2;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .navbar a {
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        li {
+            margin: 10px;
+            text-align: center;
+        }
+
+        li button {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            height: 150px;
+            width: 150px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+
+        li button img {
+            height: 80px; /* Adjust the height as needed */
+            width: 80px; /* Adjust the width as needed */
+            margin-bottom: 10px;
+        }
+
+        li button.math {
+            background: url('math.jpg') center center no-repeat;
+        }
+
+        li button.science {
+            background: url('sains.jpg') center center no-repeat;
+        }
+
+        li button.bahasa-melayu {
+            background: url('bm.jpg') center center no-repeat;
+        }
+
+        li button.english {
+            background: url('bi.jpg') center center no-repeat;
+        }
+
+        li button.history {
+            background: url('sejarah.jpg') center center no-repeat;
+        }
+
+        li button.pendidikanislam {
+            background: url('pai.jpg') center center no-repeat;
+        }
+
+        li button.pendidikanmoral {
+            background: url('moral.jpg') center center no-repeat;
+        }
+
+        li button:hover {
+            background-color: #555;
+        }
+
+        a.appointments-link {
+            text-decoration: none;
+            background-color: #601204;
+            color: white;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            height: 100px;
+            width: 200px; /* Adjust the width as needed */
+            margin: 10px;
+        }
+
+        a.appointments-link:hover {
+            background-color: #601204;
+        }
+
+        button.view-appointments {
+            background-color: #601204;
+            color: #fff;
+            padding: 4px 8px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+
+        button.view-appointments:hover {
+            background-color: #555;
+        }
+      
+        footer {
+            background-color: #601204;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-box">
+                <a href="user_register.php">Register</a>
+            </div>
+            <div class="nav-box">
+                <a href="user_login.php">Login</a>
+            </div>
+            <div class="nav-box">
+                <a href="logout.php">Logout</a>
+            </div>
+            <div class="nav-box">
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="nav-box">
+                <a href="about.html">About Us</a>
+            </div>
+            <div class="nav-box">
+                <a href="home.html">Home</a>
+            </div>
+        </div>
+        
+    </header>
+
+    <h1>Select a Subject</h1>
+    <ul>
+        <li><button class="math" onclick="window.location.href='tutors.php?subject=Math'"><img src="math.jpg" alt="Math">Math</button></li>
+        <li><button class="science" onclick="window.location.href='tutors.php?subject=Science'"><img src="sains.jpg" alt="Science">Science</button></li>
+        <li><button class="bahasa-melayu" onclick="window.location.href='tutors.php?subject=Bahasa Melayu'"><img src="bm.jpg" alt="Bahasa Melayu">Bahasa Melayu</button></li>
+        <li><button class="english" onclick="window.location.href='tutors.php?subject=English'"><img src="bi.jpg" alt="English">English</button></li>
+        <li><button class="history" onclick="window.location.href='tutors.php?subject=History'"><img src="sejarah.jpg" alt="History">History</button></li>
+        <li><button class="pendidikanislam" onclick="window.location.href='tutors.php?subject=Pendidikan Islam'"><img src="pai.jpg" alt="Pendidikan Islam">Pendidikan Islam</button></li>
+        <li><button class="pendidikanmoral" onclick="window.location.href='tutors.php?subject=Pendidikan Moral'"><img src="moral.jpg" alt="Pendidikan Moral">Pendidikan Moral</button></li>
+        <li><a href="appointment.php" class="appointments-link">View Appointments</a></li>
+    </ul>
+    
+    </div>
+    <footer>
+        &copy; 2024 Tutor Booking. All rights reserved.
+    </footer>
+
+    <script>
+        function redirectToIndex() {
+            // Implement the logic to redirect to the desired page (e.g., home.html)
+            window.location.href = 'home.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFE6C0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #FFE6C0;
+            padding: 1em;
+            color: white;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            /* Align items to stretch vertically */
+            flex-wrap: wrap;
+            /* Allow items to wrap to the next line if the screen is too small */
+            margin-top: 160px;
+            /* Add margin for spacing */
+            margin-bottom: 100px;
+            /* Add margin for spacing */
+        }
+
+        .header-box {
+            background-color: #C85D49;
+            border-radius: 40px;
+            padding: 20px;
+            text-align: center;
+            flex: 1;
+            /* Take equal space in the container */
+        }
+
+        .header-container h1,
+        .header-container h2,
+        .header-container h3 {
+            color: white;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .header-container p {
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .header-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            /* Adjust the margin as needed */
+        }
+
+        .header-container button:hover {
+            background-color: #45a049;
+        }
+
+        .icon {
+            width: 100px;
+            /* Adjust the width of the icon as needed */
+            height: 100px;
+            /* Adjust the height of the icon as needed */
+            margin-bottom: 20px;
+            /* Adjust the margin as needed */
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #601204;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            z-index: 1000;
+        }
+
+        .nav-box {
+            flex: 2;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .navbar a {
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent black background */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #601204;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+        }
+
+
+        .close {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="nav-box">
+            <a href="user_register.php">Register</a>
+        </div>
+        <div class="nav-box">
+            <a href="user_login.php">Login</a>
+        </div>
+        <div class="nav-box">
+            <a href="logout.php">Login</a>
+        </div>
+        <div class="nav-box">
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="nav-box">
+            <a href="about.html">About Us</a>
+        </div>
+        <div class="nav-box">
+            <a href="home.html">Home</a>
+        </div>
+    </div>
+    <header>
+        <div class="header-container">
+            <!-- Your main content goes here -->
+            <div class="header-box">
+                <img src="phone.png" alt="Phone Icon" class="icon">
+                <h1>BY PHONE</h1>
+                <p>(Monday to Friday, 9 am to 6 pm)</p>
+                <p>019-2109888/03-32198888</p>
+                <button type="button">Call Now</button>
+            </div>
+
+            <div class="header-box">
+                <img src="case.png" alt="Case Icon" class="icon">
+                <h2>START A NEW CASE</h2>
+                <p>Just send us your questions or concerns by starting a new case and we will give you the help you need.</p>
+                <button type="button" onclick="redirectToStartCase()">Start a Case</button>
+            </div>
+
+            <div class="header-box">
+                <img src="chat.png" alt="Chat Icon" class="icon">
+                <h3>LIVE CHAT</h3>
+                <p>Chat with a member of our in-house team.</p>
+                <button type="button" onclick="openModal()">Chat Now</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal HTML structure -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>"Sorry for any inconvenience! Our live chat line is currently busy.</p>
+            <p>If your inquiry is not urgent, you can leave a message,</p>
+            <p>and we'll get back to you as soon as possible. Click the 'Start a Case' button,</p>
+            <p>and provide your name, email, and a brief description of your issue.</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for opening and closing the modal
+        function openModal() {
+            document.getElementById('myModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+
+        // JavaScript to redirect to the "Start Case" page
+        function redirectToStartCase() {
+            // Replace 'start_case.html' with the actual path of your start case page
+            window.location.href = 'case.html';
+        }
+    </script>
+     <footer>
+        &copy; 2024 Tutor Booking. All rights reserved.
+    </footer>
+</body>
+
+</html>

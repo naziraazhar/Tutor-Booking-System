@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFE6C0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header-container {
+    background-color: #C85D49;
+    margin-top: 95px;
+    margin-bottom: 50px;
+    text-align: center;
+    padding: 10px;
+    width: 600px;
+    height: 500px;
+    margin-left: 400PX;
+    margin-right: 100PX;
+}
+
+header {
+    font-size: 1.9em;
+    color: white;
+    margin-bottom: 10px; /* Adjusted margin-bottom value */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #601204;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.nav-box {
+    flex: 2;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.navbar a {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    position: relative;
+}
+
+footer {
+    background-color: #601204;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+.text-section {
+    flex: 1;
+    text-align: left;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="nav-box">
+            <a href="user_register.php">Register</a>
+        </div>
+        <div class="nav-box">
+            <a href="user_login.php">Login</a>
+        </div>
+        <div class="nav-box">
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="nav-box">
+            <a href="about.html">About Us</a>
+        </div>
+        <div class="nav-box">
+            <a href="home.html">Home</a>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="text-section">
+            <div class="header-container">
+                <header>
+                    <!-- Your main content goes here -->
+                    <h1>ABOUT US</h1>
+                    <p>Welcome to our website! A tutor booking system streamlines the process of connecting 
+                        students with qualified educators. Users can easily schedule one-on-one sessions, 
+                        choose specific subjects, and set preferred time slots.</p>
+                    <p>Feel free to explore our website and discover more about what we have to offer.
+                        THANK YOU :)
+                    </p>
+
+                </header>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        &copy; 2024 Tutor Booking. All rights reserved.
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:#FFE6C0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: center; /* Center the form vertically */
+            align-items: center; /* Center the form horizontally */
+        }
+        
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #601204;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            z-index: 1000;
+        }
+
+        .nav-box {
+            flex: 2;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .navbar a {
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+
+        form {
+            background-color: white; /* Green Background */
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            color: black;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        .submit-box {
+            display: flex;
+            justify-content: center;
+            color:#478c24
+            /* Center the submit button horizontally */
+        }
+
+        button {
+            background-color: #173705;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1f4f07;
+        }
+        footer {
+            background-color: #601204;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-box">
+            <a href="user_register.php">Register</a>
+        </div>
+        <div class="nav-box">
+            <a href="user_login.php">Login</a>
+        </div>
+        <div class="nav-box">
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="nav-box">
+            <a href="about.html">About Us</a>
+        </div>
+    </div>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <div class="submit-box">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <footer>
+        &copy; 2024 Tutor Booking. All rights reserved.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking App</title>
+    <style>
+        body {
+            background-image: url('body.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #601204;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            z-index: 1000;
+        }
+
+        .nav-box {
+            flex: 2;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .navbar a {
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex: 1;
+            align-items: center;
+        }
+
+        .text-section {
+            flex: 1;
+            padding: 2em;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .centered-image {
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .centered-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .bottom-box {
+            background-color: #601204;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .sign-up-button {
+            background-color: #ffffff;
+            color: #173705;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .booking-section {
+            background-color: #173705;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="nav-box">
+            <a href="user_register.php">Register</a>
+        </div>
+        <div class="nav-box">
+            <a href="user_login.php">Login</a>
+        </div>
+        <div class="nav-box">
+            <a href="logout.php">Login</a>
+        </div>
+        <div class="nav-box">
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="nav-box">
+            <a href="about.html">About Us</a>
+        </div>
+        <div class="nav-box">
+            <a href="home.html">Home</a>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="text-section">
+            <!-- Your existing content goes here -->
+        </div>
+    </div>
+
+    <div class="bottom-box">
+        <button class="sign-up-button" onclick="window.location.href='index.html'">BOOKING</button>
+    </div>
+
+   
+</body>
+
+</html>
